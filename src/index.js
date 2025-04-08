@@ -27,6 +27,32 @@ const reviews = [
 //Your Code Below Here////
 const renderReview = (review) => {
   console.log(review);
+
+  // setting up structure
+  const container = document.createElement('div');
+  const img = document.createElement('img');
+  const div = document.createElement('div');
+  const username = document.createElement('p');
+  const rating = document.createElement('p');
+  const written_review = document.createElement('p');
+
+
+  container.className = 'review_container';
+  img.src = review.image;
+  username.textContent = review.username;
+  rating.textContent = review.star;
+  written_review.textContent = review.review;
+
+
+  document.body.appendChild(container);
+
+  container.appendChild(img);
+  container.appendChild(div);
+
+  div.appendChild(username);
+  div.appendChild(rating);
+  div.appendChild(written_review);
+
 }
 
 reviews.forEach(review => renderReview(review));
