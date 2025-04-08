@@ -1,3 +1,5 @@
+import { calculateStarAverage } from "./logic.js";
+
 //Do not change //////////////////////////////////
 const reviews = [
   {
@@ -23,3 +25,9 @@ const reviews = [
 /////////////////////////////////////////////////////////////////////
 
 //Your Code Below Here////
+const renderReview = (review) => {
+  console.log(review);
+}
+
+reviews.forEach(review => renderReview(review));
+
