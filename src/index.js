@@ -66,7 +66,6 @@ const renderReview = (review) => {
   div.appendChild(written_review);
 
   
-  updateStarRating();
 
 }
 
@@ -85,6 +84,8 @@ const submitForm = (form) => {
 
   renderReview(newReview);
   reviews.push(newReview);
+  
+  updateStarRating();
 }
 
 
