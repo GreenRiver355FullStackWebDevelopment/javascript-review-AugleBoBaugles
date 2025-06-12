@@ -57,3 +57,23 @@ const renderReview = (review) => {
 
 reviews.forEach(review => renderReview(review));
 
+// Javascript forms
+const form = document.querySelector("form");
+
+const submitForm = (form) => {
+  const newReview = {
+    username: form['username'].value,
+    image: form['image'].value,
+    star: form['reason'].value,
+    review: form['review'].value,
+  }
+
+  renderReview(newReview);
+  reviews.push(newReview);
+}
+
+
+form.addEventListener("submit", function(event){
+  event.preventDefault();
+  submitForm(form);
+})
