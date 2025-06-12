@@ -25,6 +25,18 @@ const reviews = [
 /////////////////////////////////////////////////////////////////////
 
 //Your Code Below Here////
+const updateStarRating = () => {
+  // Average Star Rating
+  const starRating = document.querySelector(".starRating");
+
+  const currentRating = calculateStarAverage(reviews)
+  console.log(currentRating);
+
+  starRating.textContent = "Star Rating: " + currentRating;
+}
+
+updateStarRating();
+
 const renderReview = (review) => {
   console.log(review);
 
@@ -53,6 +65,9 @@ const renderReview = (review) => {
   div.appendChild(rating);
   div.appendChild(written_review);
 
+  
+  updateStarRating();
+
 }
 
 reviews.forEach(review => renderReview(review));
@@ -77,3 +92,5 @@ form.addEventListener("submit", function(event){
   event.preventDefault();
   submitForm(form);
 })
+
+
